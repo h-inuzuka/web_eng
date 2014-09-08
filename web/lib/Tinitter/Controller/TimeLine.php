@@ -1,20 +1,19 @@
 <?php
 namespace Tinitter\Controller;
 
+use \Tinitter\Model\Post as M_Post;
+
 class TimeLine
 {
-    public function show ()
+    public function show ($page_num = 1)
     {
-        //echo "hello world from webeng!";
         $app = \Slim\Slim::getInstance();
-        $app->render('TimeLine/show.twig');
-        //$app->render('index.twig', ['display_text' => "Hello, world! from to"]);
-        /*
-        $post = new \Tinitter\Model\Post();
-        $post->nickname = 'ニックネーム';
-        $post->body = '本文';
-        $post->save();
-        $same_post = \Tinitter\Model\Post::find(1);
-        */
+        list($post_list, $next_page_is_exist) = M_Post::getByPage(10, $page_num);
+        
+        $app->render('TimeLine/show.twig', [
+           'post_list' => $post_list,
+           'page_num' => $page_num,
+           'next_page_is_exist' => $next_page_is_exist
+        ]);
     }
 }

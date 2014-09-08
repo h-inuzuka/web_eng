@@ -1,12 +1,12 @@
 .postcell{
     margin-top: 10px;
-    background-color: #FEEEEE;
+    background-color: #EEEEEE;
     padding: 15px;
     border-radius: 8px;
 }
 
 .postcell .body{
-    sord-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .postcell .info{
