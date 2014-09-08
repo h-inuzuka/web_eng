@@ -1,22 +1,24 @@
 <?php
 //ライブラリの読み込み
-require '../vendor/autoload.php';
-require '../config.php';
+require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../config.php';
 
-//ini_set('display_errors', '1');
+ini_set('display_errors', '1');
+
+//データベース接続セットアップ
+\Base\DB::registerIlluminate($db_settings);
+
 
 //Slimの初期化
 $app = new \Slim\Slim([
     'templates.path' => TEMPLATES_DIR_PATH,
-    'view' => new \Slim\Views\Twig()
+    'view' => new \Slim\Views\Twig(),
+    'debug' => DEBUG
 ]);
 
 //Slimにルートを登録
 \Tinitter\Route::registration($app);
-/*
-$app->get('/', function(){
-    echo "Hello, World!!!!";
-});
-*/
+
+
 //実行
 $app->run();
