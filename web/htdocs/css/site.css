@@ -1,12 +1,12 @@
 .postcell{
     margin-top: 10px;
-    background-color: #EEEEEE;
+    background-color: #FEEEEE;
     padding: 15px;
     border-radius: 8px;
 }
 
 .postcell .body{
-    word-wrap: break-word;
+    sord-wrap: break-word;
 }
 
 .postcell .info{
@@ -24,7 +24,7 @@
 
 .postform{
     margin-top: 10px;
-    background-color: #CCCCD0;
+    background-color: #11ddff;
     padding: 15px;
     border-radius: 8px;
 }
