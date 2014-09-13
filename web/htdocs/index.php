@@ -16,7 +16,8 @@ ini_set('display_errors', '1');
 $app = new \Slim\Slim([
     'templates.path' => TEMPLATES_DIR_PATH,
     'view' => new \Slim\Views\Twig(),
-    'debug' => DEBUG
+    //'debug' => DEBUG,
+    'log.level' => \Slim\Log::WARN
 ]);
 
 //Slimにルートを登録

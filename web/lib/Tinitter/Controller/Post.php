@@ -10,6 +10,8 @@ class Post
     {
         $app = \Slim\Slim::getInstance();
         $params = $app->request->params();
+        //$app->log->debug(print_r($params));
+        //exit;
         $error_list = V_Post::byArray($params);
         
         if(empty($error_list)){
