@@ -7,9 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w{php php-pdo php-mbstring php-mysqlnd php-common php-xml php-devel php-cli php-pear}.each do |pkg|
+%w{php php-pdo php-mbstring php-mysqlnd php-common php-xml php-devel php-cli php-pear php-pecl-xdebug}.each do |pkg|
   package pkg do
     action :install
-    options "--enablerepo=remi" 
+    options "--enablerepo=remi"
   end
 end

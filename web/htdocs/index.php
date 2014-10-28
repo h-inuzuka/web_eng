@@ -17,7 +17,7 @@ $app = new \Slim\Slim([
     'templates.path' => TEMPLATES_DIR_PATH,
     'view' => new \Slim\Views\Twig(),
     //'debug' => DEBUG,
-    'log.level' => \Slim\Log::WARN
+    //'log.level' => \Slim\Log::WARN
 ]);
 
 //Slimにルートを登録

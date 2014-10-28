@@ -7,6 +7,6 @@ class TimeLineTest extends \Tinitter\Test\Base
     {
         $dom = $this->req_dom('/');
         $this->assertEquals('web eng', $dom->find('title', 0)->text);
-        $this->assertEquals('投稿フォーム', $dom->find('h3', 0)->text);
+        $this->assertEquals('テキスト', $dom->find('label', 1)->text);
     }
 }
